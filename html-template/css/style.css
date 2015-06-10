@@ -52,7 +52,7 @@ body {
   line-height: 24px;
   margin: 0;
   padding: 48px;
-  width: 640px;
+  width: 100%;
   border-left: 6px solid #DDDDDD;
 
 }
@@ -83,6 +83,11 @@ header nav a {
   text-decoration: none;
 }
 
+.content {
+  float: left;
+  width: 80%;
+}
+
 h2 {
   font-size: 32px;
   color: black;
@@ -109,4 +114,33 @@ article {
   margin: 48px 0;
   padding-bottom: 24px;
 }
+
+article p:first-letter {
+  float: left;
+  font-size: 96px;
+  line-height: 16px;
+  color: #DDDDDD;
+}
+
+section {
+  float: right;
+  width: 20%;
+  padding: 80px;
+}
+
+.footer nav a {
+  display: inline-block;
+  padding-right: 5px;
+  border-right: 2px solid #EEEEEE;
+  color: #F60000;
+
+}
+.footer {
+  clear: both;
+}
+
+footer nav a:last-child {
+  border-right: none;
+}
+
 
