@@ -1,0 +1,1 @@
+Latest home Resume repo can be found in a folder called RESUME.
