@@ -31,3 +31,10 @@ Element.prototype.Contact = function(){
 	this.init();
 
 }
+
+
+/* HomeWork
+
+
+
+*/

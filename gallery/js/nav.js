@@ -7,7 +7,7 @@ Element.prototype.Nav = function(){
       btn = document.createElement('div'),
       container = document.getElementById('container');
 
-      console.log(sections.gallery);
+     // console.log(sections.gallery);
 
   this.toggleNav = function(){
     if(container.style.left === "0px"){
@@ -43,7 +43,7 @@ Element.prototype.Nav = function(){
   this.showSection = function(id){
     this.hideSection();
     //console.log(document.getElementById('id').style)
-    console.log(document.getElementById(id))
+    //console.log(document.getElementById(id))
     document.getElementById(id).style.display = 'block';
     document.getElementById(id).style.opacity = '1.0';
     document.getElementById(id).style.zIndex = '50';

@@ -6,12 +6,47 @@ Element.prototype.Gallery = function(){
   var ul = gallery.children[0];
   var photos = {};
   var photo = this;
+  var tags = document.getElementsByTagName('data-section')
   var container = document.getElementById('container');
   //var closeBtn = document.createElement('div');
+  this.allThetags = [];
+
+  this.filterphotos = function(query){
+    //console.log(query);
+
+    
+    for(var i=0; i<ul.children.length; i++){
+      var tags = ul.children[i].dataset.tags;
+      var arr = tags.split(',');
+      //console.log(arr);
+      var matched = false;
+
+      arr.forEach(function(tag){
+        if(tag === query){
+          ul.children[i].style.display = 'block';
+          matched = true;
+        }
+      })
+      //grab the tags
+
+      //check if tags is equal to the query
+      //if there is a match show the li
+      //if it isn't a match, hide the li
+      if (matched === false) {
+        ul.children[i].style.display = 'none';
+      };
+
+      if (query === 'all') {
+        ul.children[i].style.display = 'block';
+      }
+    }
+
+
+  }
 
    this.singlePhoto = function(evt){
       //console.log(evt.target.style.backgroundImage);
-
+      console.log(evt)
       //Create element to add on the document that'll hold the photo
       var section = document.createElement('section');
       section.classList.add('single-photo');
@@ -38,47 +73,36 @@ Element.prototype.Gallery = function(){
       container.appendChild(section);
 
 
-
-
-
-
-
-
-
-
-
-
-    // //create a section
-    // //then add a classname to that section so that it could get its CSS
-    // //bring image to section
-    // var div = document.createElement('div');
-    // closeBtn.classList.add('close');
-    // div.classList.add('single-photo');
-    // container.appendChild(div);
-    // div.appendChild(closeBtn);
-    // div.style.backgroundSize = 'cover';
-    // div.style.backgroundImage = ev.toElement.style.backgroundImage;
-    // //li.style.backgroundImage = 'url("'+photo.image_url+'")';
-    // //div.innerHTML = '<div class="meta"><h5>'+toElement.innerText+'</h5><h6>'+toElement.innerHTML+'</h6></div><div class="stats"><div>'+photo.rating+'</div></div>'+'</div>';
-    // console.log(ev)
-
   }
 
   this.layoutPhotos = function(){
       // add logic for each photo in here
       photos.forEach(function(photo, index){
-        //console.log(photo);
+        
         var li = document.createElement('li');
         li.style.backgroundImage = 'url("'+photo.image_url+'")';
         li.style.backgroundSize = 'cover';
         li.innerHTML = '<div class="meta"><h5>'+photo.name+'</h5><h6>'+photo.user.fullname+'</h6></div><div class="stats"><div>'+photo.rating+'</div></div>'+'</div>';
         
+        //Create an empty array that we will populate.
+        // we have access to the photo array
+        var tags = [];
+        //loop to array and push to new array  
+        photo.tags.forEach(function(tag){
+          //convert to lowecase
+          tags.push(tag.toLowerCase());
+        })
+        //gallery.allThetags.push(tags);
+        li.dataset.tags = tags;
+        //li.dataset.tags = photo.tags
+
         li.dataset.description = photo.description;
 
         li.addEventListener('click', gallery.singlePhoto)
         ul.appendChild(li);
+        //console.log(li);
       })
-
+      //console.log(this.allThetags);
   };
 
   this.connect = function(){
