@@ -1,0 +1,182 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #121212;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+body {
+	width: 100%;
+  height:100%;
+	margin: 0;
+  padding: 0;
+  background-color: green;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 100px 50px 50px 100px;
+}
+
+section h1{
+  text-align: center;
+  font-size: 36px;
+  padding: 50px 50px 10px 50px;
+  height: 120px;
+  width: 100%;
+
+}
+
+div {
+  float: left;
+  margin: 20px 20px 20px 20px;
+  padding: 30px 30px 30px 30px;
+}
+
+#cards_container {
+  background-color: blue;
+  width: 900px;
+  height: 800px;
+  display: block;
+  padding: 50px;
+
+}
+
+.diamond {
+  background-image: url('../img/bicycle-back.jpg'); 
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: left;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+/*.spade {
+  background-image: url('../img/bicycle-back.jpg');
+    background-image: url('../img/french-suits.svg'); 
+}*/
+.spade {
+  background-image: url('../img/bicycle-back.jpg'); 
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.club {
+  background-image: url('../img/bicycle-back.jpg'); 
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.heart {
+  background-image: url('../img/bicycle-back.jpg'); 
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+
+/*.cards{
+  width: 90px;
+  height:  90px;
+  padding: 20px 20px 20px 20px;
+  display: fl
+}*/
+
+/*#clubs {
+  
+}
+
+#spade {
+  
+}
+
+.back{
+  background-image: url('../img/bicycle-back.jpg');
+  width: 100px;
+  height: 100px;
+
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
