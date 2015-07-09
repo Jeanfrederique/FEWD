@@ -120,6 +120,62 @@ div {
   margin-bottom: 30px;
 }
 
+.spadehidden{
+  background-image: url('../img/french-suits.svg');
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+
+}
+
+.hearthidden{
+  background-image: url('../img/french-suits.svg');
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+
+}
+
+.clubhidden{
+  background-image: url('../img/french-suits.svg');
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+
+}
+
+/*.diamondhidden{
+  background-image: url('../img/french-suits.svg');
+  width: 92px;
+  height: 130px;
+  background-color: white;
+  background-position: right;
+  background-size: cover;
+  margin-bottom: 30px;
+
+}*/
+
+.diamondhidden {
+  background-image: url("../img/french-suits.svg");
+  background-position: left bottom;
+  width: 100px;
+  height: 100px;
+  visibility: visible;
+  background-color: white;
+  z-index: 20;
+  position: relative;
+  margin-top: 30px;
+  margin-left: auto;
+}
 
 /*.cards{
   width: 90px;
@@ -134,14 +190,9 @@ div {
 
 #spade {
   
-}
-
-.back{
-  background-image: url('../img/bicycle-back.jpg');
-  width: 100px;
-  height: 100px;
-
 }*/
+
+
 
 
 
