@@ -12,9 +12,9 @@ Developer @GA in NYC
 
 /* Box Model Hack */
 * {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
 }
 
 /******************************************
@@ -22,10 +22,10 @@ Developer @GA in NYC
 /*******************************************/
 
 body {
-     color: #121212;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #121212;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 
@@ -35,199 +35,169 @@ body {
 
 /* Center the container */
 body {
-	width: 100%;
+  width: 100%;
   height:100%;
-	margin: 0;
+  margin: 0;
   padding: 0;
-  background-color: green;
+  font-size: 16px;
+  font-weight: lighter;
+  background-color: #003308; /*005a17*/
+  background: -webkit-gradient(radial, center center, 0, center center, 800, from(#005a17), to(#003308));
+  font-family: Garamond, sans-serif;
+  color: #f2f5f3;
+  text-align: center;
+  padding-top: 5%;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-.container{
+#container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#container h1 {
+  font-size: 3.0em;
+  margin-bottom: 50px;
+}
+
+#score {
+  font-size: 1.0em;
+  font-weight: lighter;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 55%;
+}
+
+#game-over {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  display: block;
+  width: 70%;
+  height: 400px;
+  background-color: #282c34;
+  border: 4px solid #f2f5f3;
+  font-size: 5.0em;
+  font-style: italic;
+  font-weight: lighter;
+  padding-top: 5%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.blur-filter {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+
+#close {
+  height: 32px;
+  width: 32px;
+  background-image: url("../img/close.png");
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border: none;
+}
+
+.card {
+  margin: 15px;
+  position:relative;
+  display: inline-block;
+  background-color: #FFF;
+  width: 125px;
+  height: 175px;
+  border-radius: 8px;
+  z-index: 0;
+
+}
+
+
+.back {
+
+  position:absolute;
+  display: block;
+  background-size: cover;
+  background-image: url("../img/bicycle-back.jpg");
   width: 100%;
   height: 100%;
-  padding: 100px 50px 50px 100px;
-}
+  border-radius: 8px;
+  z-index: 5;
+  transition: all .5s;
 
-section h1{
-  text-align: center;
-  font-size: 36px;
-  padding: 50px 50px 10px 50px;
-  height: 120px;
-  width: 100%;
+
 
 }
 
-div {
-  float: left;
-  margin: 20px 20px 20px 20px;
-  padding: 30px 30px 30px 30px;
-}
 
-#cards_container {
-  background-color: blue;
-  width: 900px;
-  height: 800px;
-  display: block;
-  padding: 50px;
-
-}
 
 .diamond {
-  background-image: url('../img/bicycle-back.jpg'); 
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: left;
-  background-size: cover;
-  margin-bottom: 30px;
-}
-
-/*.spade {
-  background-image: url('../img/bicycle-back.jpg');
-    background-image: url('../img/french-suits.svg'); 
-}*/
-.spade {
-  background-image: url('../img/bicycle-back.jpg'); 
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-}
-
-.club {
-  background-image: url('../img/bicycle-back.jpg'); 
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-}
-
-.heart {
-  background-image: url('../img/bicycle-back.jpg'); 
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-}
-
-.spadehidden{
-  background-image: url('../img/french-suits.svg');
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-
-}
-
-.hearthidden{
-  background-image: url('../img/french-suits.svg');
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-
-}
-
-.clubhidden{
-  background-image: url('../img/french-suits.svg');
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-
-}
-
-/*.diamondhidden{
-  background-image: url('../img/french-suits.svg');
-  width: 92px;
-  height: 130px;
-  background-color: white;
-  background-position: right;
-  background-size: cover;
-  margin-bottom: 30px;
-
-}*/
-
-.diamondhidden {
+  z-index: 3;
   background-image: url("../img/french-suits.svg");
   background-position: left bottom;
   width: 100px;
   height: 100px;
-  visibility: visible;
   background-color: white;
-  z-index: 20;
-  position: relative;
+  position: absolute;
   margin-top: 30px;
-  margin-left: auto;
+  margin-left: 17px;
+  display: block;
+  float: left;
+
+
 }
 
-/*.cards{
-  width: 90px;
-  height:  90px;
-  padding: 20px 20px 20px 20px;
-  display: fl
-}*/
-
-/*#clubs {
-  
+.spade {
+  background-image: url("../img/french-suits.svg");
+  background-position: left top;
+  width: 100px;
+  height: 100px;
+  z-index: 3;
+  background-color: white;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 17px;
+  display: block;
+  float: left;
 }
 
-#spade {
-  
-}*/
+.heart {
+
+  background-image: url("../img/french-suits.svg");
+  background-position: right top;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 15px;
+  display: block;
+  float: left;
 
 
+}
+
+.clubs {
+  background-image: url("../img/french-suits.svg");
+  background-position: right bottom;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 15px;
+  display: block;
+  float: left;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

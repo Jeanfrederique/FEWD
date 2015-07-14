@@ -20,6 +20,11 @@
 		"Occupation":	"Project Manager"
 		},
 		{
+		"name"	:	"Hunter",
+		"age"	:	"29",
+		"Occupation":	"Sr. Web Engineer"
+		},
+		{
 		"name"	:	"Wendy",
 		"age"	:	"43",
 		"Occupation":	"Producer"

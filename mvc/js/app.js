@@ -16,14 +16,22 @@ var View = function(elem, parent, className){
 View.prototype = {
 	setContent : function(content){
 		this.element.innerHTML = content;
+	},
+	fadeViewIn : function(){
+		var self = this;
+		setTimeout(function(){
+			self.element.classList.add('active');
+		}, 1000)
+		
 	}
 }
 
 Controller.prototype = {
 	createView	: function(){
 		this.model.forEach(function(user){
-			var v = new View('div', document.body, 'user');
+			var v = new View('div', document.getElementById('container'), 'user');
 			v.setContent('<h3>'+user.model.name+'</h3><h5>'+user.model.age+'</h5><h5>'+user.model.Occupation+'</h5>');
+			v.fadeViewIn();
 		});
 	},
 
